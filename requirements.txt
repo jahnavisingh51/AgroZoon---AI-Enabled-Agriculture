@@ -1,0 +1,44 @@
+# =============================================================================
+#  AgroZoon — Python dependencies
+# =============================================================================
+# Target: Python 3.10, 3.11, or 3.12 (recommended: 3.11)
+#
+# Setup (from repository root):
+#   python -m venv venv
+#   venv\Scripts\activate          # Windows
+#   source venv/bin/activate       # Linux / macOS
+#   pip install --upgrade pip
+#   pip install -r requirements.txt
+#
+# PyTorch: wheels below are from PyPI (CPU). If install fails, see README for
+# the official PyTorch index URL (GPU / alternate platforms).
+# =============================================================================
+
+# --- Web ---
+Flask==3.0.3
+Flask-SQLAlchemy==3.1.1
+bcrypt>=4.2.0
+SQLAlchemy>=2.0.16
+Werkzeug==3.0.3
+Jinja2==3.1.4
+MarkupSafe==2.1.5
+itsdangerous==2.2.0
+click==8.1.7
+blinker==1.8.2
+
+# --- Data & ML ---
+numpy==1.26.4
+pandas==2.2.2
+scipy==1.13.1
+scikit-learn==1.5.0
+joblib==1.4.2
+
+# --- Images (disease detection upload / preprocessing) ---
+Pillow==10.3.0
+
+# --- Deep learning (plant disease ResNet model) ---
+torch==2.3.1
+torchvision==0.18.1
+
+# --- Production WSGI (not used on Windows; skipped automatically) ---
+gunicorn==22.0.0; sys_platform != 'win32'
